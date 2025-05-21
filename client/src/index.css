@@ -1,0 +1,150 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, h4, h5, h6, ul, li, p, input, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+  background: #f6f8fa;
+  min-height: 100vh;
+  color: #222;
+}
+
+/* Main container */
+#root > div {
+  background: #fff;
+  border-radius: 16px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 480px;
+  box-shadow: 0 8px 32px 0 rgba(60, 60, 120, 0.12);
+}
+
+/* Header */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #2d3a4a;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+/* Form */
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"], input[type="search"], input[type="email"], input[type="password"] {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #e0e4ea;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f8fafc;
+  transition: border 0.2s;
+}
+
+input:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #6c63ff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.12s;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:disabled {
+  background: #b0b6d2;
+  cursor: not-allowed;
+}
+
+/* Todo List */
+ul {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0.5rem;
+  border-bottom: 1px solid #f0f1f7;
+  font-size: 1.05rem;
+  transition: background 0.15s;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li span {
+  flex: 1;
+  word-break: break-word;
+}
+
+/* Delete button */
+li button {
+  background: #ff4d4f;
+  color: #fff;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  margin-left: 0.6rem;
+  transition: background 0.15s;
+}
+
+li button:hover {
+  background: #d9363e;
+}
+
+/* Summarize Button */
+button[disabled] {
+  opacity: 0.7;
+}
+
+button + button {
+  margin-left: 0.5rem;
+}
+
+/* Status Messages */
+div[style*="color: green"] {
+  margin-top: 1rem;
+  color: #2ecc40 !important;
+  font-weight: 600;
+}
+
+div[style*="color: red"] {
+  margin-top: 1rem;
+  color: #ff4d4f !important;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #root > div {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  h1 {
+    font-size: 1.25rem;
+  }
+}
