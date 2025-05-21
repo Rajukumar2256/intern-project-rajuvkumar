@@ -39,7 +39,7 @@ A full-stack application to manage personal to-dos, summarize them using a real 
 
 ### 3. Environment Variables
 
-Copy `.env.example` to `.env` in both `server` and `client` as needed, and fill in your actual keys/URLs.
+Copy `.env.example` to `.env` in `server` as needed, and fill in your actual keys/URLs.
 
 ---
 
